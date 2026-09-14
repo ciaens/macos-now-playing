@@ -1,0 +1,38 @@
+[package]
+name = "macos-now-playing"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Now playing information and remote commands on macOS through MediaPlayer.framework"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/ciaens/macos-now-playing"
+keywords = ["macos", "mediaplayer", "now-playing", "media-keys"]
+categories = ["os::macos-apis", "multimedia"]
+readme = "README.md"
+
+[package.metadata.docs.rs]
+default-target = "aarch64-apple-darwin"
+targets = ["aarch64-apple-darwin", "x86_64-apple-darwin"]
+
+[build-dependencies]
+cc = "1"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+unwrap_used = "warn"
+expect_used = "warn"
+indexing_slicing = "warn"
+arithmetic_side_effects = "warn"
+unreachable = "warn"
+unimplemented = "warn"
+unchecked_time_subtraction = "warn"
+todo = "warn"
+string_slice = "warn"
+panic_in_result_fn = "warn"
+panic = "warn"
+exit = "warn"
+as_conversions = "warn"
+dbg_macro = "warn"
+
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
